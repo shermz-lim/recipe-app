@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.material-dark {
+    background-color: #4bacb8;
+}
+
+.material-normal {
+    background-color: #80deea;
+}
+
+.material-light {
+    background-color: #b4ffff;
+}
