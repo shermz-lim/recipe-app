@@ -10,10 +10,10 @@
     <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link white" href="#">Recipes</a>
+          <a class="nav-link white" href="#" (click)="onSelect('recipe')">Recipes</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link white" href="#">Shopping List</a>
+          <a class="nav-link white" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
@@ -30,3 +30,8 @@
     </div>
   </div>
 </nav>
+
+<div class="container text-center my-4">
+  <h3 class="display-4">{{ welcomeText }}</h3>
+  <hr>
+</div>
