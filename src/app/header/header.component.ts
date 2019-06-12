@@ -9,20 +9,11 @@ import { typeWithParameters } from '@angular/compiler/src/render3/util';
 export class HeaderComponent implements OnInit {
   @Output() featureSelected = new EventEmitter<string>();
 
-  welcomeText = '';
-  welcomeTextFull = 'Welcome to the Recipe App'.split('');
-  counter = 0;
   collapsed = true;
 
   constructor() { }
 
   ngOnInit() {
-    setInterval(() => {
-      if (this.counter < this.welcomeTextFull.length) {
-        this.welcomeText = this.welcomeText + this.welcomeTextFull[this.counter];
-        this.counter++;
-      }
-    }, 50);
   }
 
   onSelect(feature: string) {
