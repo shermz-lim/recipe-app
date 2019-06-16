@@ -7,17 +7,12 @@ import { typeWithParameters } from '@angular/compiler/src/render3/util';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() featureSelected = new EventEmitter<string>();
 
   collapsed = true;
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onSelect(feature: string) {
-    this.featureSelected.emit(feature);
   }
 
 }
