@@ -21,7 +21,7 @@
           <button type="button" class="btn material-normal m-1" (click)="onClear()">
             Clear 
           </button>
-          <button type="button" class="btn material-normal m-1" (click)="onDelete()" [disabled]="!editMode">
+          <button type="button" class="btn material-normal m-1" (click)="onDelete()" *ngIf="editMode">
             Delete
           </button>
         </div>
