@@ -34,7 +34,7 @@
       <div class="dropdown-menu" aria-labelledby="recipeDropdown">
         <a class="dropdown-item" style="cursor: pointer;" (click)="sendIngredientsToShopping(recipe.ingredients)">To Shopping List</a>
         <a class="dropdown-item" style="cursor: pointer;" [routerLink]="['edit']">Edit Recipe</a>
-        <a class="dropdown-item" style="cursor: pointer;" >Delete Recipe</a>
+        <a class="dropdown-item" style="cursor: pointer;" (click)="onDelete()" >Delete Recipe</a>
       </div>
     </div>
   </div>
