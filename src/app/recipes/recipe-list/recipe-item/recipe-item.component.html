@@ -5,7 +5,7 @@ class="list-group-item list-group-item-action p-0">
   <div class="row justify-content-between">
     <div class="col-8 pl-4 mt-2">
       <h4 class="mb-1">{{ recipe.name }}</h4>
-      <p class="mb-1">{{ recipe.description | slice:0:80 }}...</p>
+      <p class="mb-1">{{ recipe.description | limitString:80 }}</p>
     </div>
     <div class="col-4">
       <img src="{{ recipe.imagePath }}" alt="recipe-image" class="img-fluid img-height">

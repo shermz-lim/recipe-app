@@ -16,6 +16,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeBlankComponent } from './recipes/recipe-blank/recipe-blank.component';
 import { RecipeService } from './recipes/recipe.service';
+import { LimitStringPipe } from './limit-string.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RecipeService } from './recipes/recipe.service';
     ShoppingEditComponent,
     DropdownDirective,
     RecipeBlankComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    LimitStringPipe
   ],
   imports: [
     BrowserModule,
