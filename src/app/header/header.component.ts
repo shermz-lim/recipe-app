@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   onFetchRecipes() {
-    this.dataService.fetchRecipes();
+    this.dataService.fetchRecipes().subscribe();
   }
 
 }
