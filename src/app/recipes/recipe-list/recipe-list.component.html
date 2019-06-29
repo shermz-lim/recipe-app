@@ -6,7 +6,10 @@
 <hr>
 
 <div class="row">
-  <div class="col-12 list-group">
+  <div class="col-12 col-md-6 text-center mt-5" *ngIf="isLoading">
+      <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="col-12 list-group" *ngIf="!isLoading">
     <app-recipe-item 
     *ngFor="let recipe of recipes; let i = index" 
     [recipe]="recipe" [id]="i"
