@@ -1,0 +1,25 @@
+a.link {
+cursor: pointer;
+text-decoration: underline;
+color: blue;
+}
+
+
+a:focus.link, a:hover.link {
+border-bottom: 1px solid;
+color: blueviolet
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.errorMessage {
+    text-align: center;
+    align-self: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: rgb(255,192,203)
+}

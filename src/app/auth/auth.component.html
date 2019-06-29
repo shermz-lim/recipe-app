@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row justify-content-around mt-5">
+    <div class="col-12 col-md-6 text-center mt-5" *ngIf="isLoading">
+        <app-loading-spinner></app-loading-spinner>
+    </div>
+    <div class="col-12 col-md-6" *ngIf="!isLoading">
+        <h2 class="text-center">
+            {{ isLoginMode ? 'Welcome Back!' : 'Join Us Today' }}</h2>
+        <hr>
+        <div *ngIf="error" class="errorMessage">
+            An error occured: {{ error }}
+        </div>
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+                <small class="text-muted" *ngIf="authForm.get('email').invalid && authForm.get('email').touched">
+                    Please enter a valid email address
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password">
+                <small class="text-muted" *ngIf="authForm.get('password').invalid && authForm.get('password').touched">
+                    Please enter a password of at least length 6
+                </small>
+            </div>
+            <div class="mb-3 mt-4">
+                <button class="btn material-light w-100" [disabled]="authForm.invalid">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button>
+            </div>
+            <p>{{ isLoginMode ? 'Do not have an account? Register' : 'Already have an account? Log in' }}
+                <a class="link" (click)="onSwitchMode()">here</a></p>
+        </form>
+    </div>
+</div>
+</div>

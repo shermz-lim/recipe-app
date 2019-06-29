@@ -19,6 +19,8 @@ import { RecipeBlankComponent } from './recipes/recipe-blank/recipe-blank.compon
 import { RecipeService } from './recipes/recipe.service';
 import { LimitStringPipe } from './limit-string.pipe';
 import { StorageService } from './shared/data-storage.service';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { StorageService } from './shared/data-storage.service';
     DropdownDirective,
     RecipeBlankComponent,
     RecipeEditComponent,
-    LimitStringPipe
+    LimitStringPipe,
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
