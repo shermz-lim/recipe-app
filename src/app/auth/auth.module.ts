@@ -7,8 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/recipe', pathMatch: 'full' },
-    {path: 'auth', component: AuthComponent}
+    {path: '', component: AuthComponent}
 ];
 
 

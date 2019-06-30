@@ -8,7 +8,7 @@ import { RecipeBlankComponent } from './recipe-blank/recipe-blank.component';
 import { RecipeResolverService } from './recipe-resolver.service';
 
 const routes: Routes = [
-    {path: 'recipe',
+    {path: '',
     component: RecipesComponent,
     canActivate: [AuthGuard],
     children: [

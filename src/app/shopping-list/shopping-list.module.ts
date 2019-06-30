@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 const routes = [
-    {path: 'shopping', component: ShoppingListComponent },
+    {path: '', component: ShoppingListComponent },
 ];
 
 @NgModule({
