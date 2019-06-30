@@ -32,4 +32,22 @@ export class ShoppingListService {
         this.ingredients.splice(index, 1);
         this.ingredientsChanged.next(this.ingredients.slice());
     }
+
+    downloadIngredients() {
+        const data = this.ingredients.slice();
+        const header = Object.keys(data[0]);
+        const csv = data.map(row => header.map(fieldName => JSON.stringify(row[fieldName])).join(','));
+        csv.unshift(header.join(','));
+        const csvArray = csv.join('\r\n');
+
+        const a = document.createElement('a');
+        const blob = new Blob([csvArray], {type: 'text/csv' })
+        const url = window.URL.createObjectURL(blob);
+
+        a.href = url;
+        a.download = "shopping-list.csv";
+        a.click();
+        window.URL.revokeObjectURL(url);
+        a.remove();
+    }
 }

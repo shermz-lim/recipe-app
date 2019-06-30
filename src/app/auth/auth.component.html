@@ -5,6 +5,15 @@
         <app-loading-spinner></app-loading-spinner>
     </div>
     <div class="col-12 col-md-6" *ngIf="!isLoading">
+        <div class="text-center mb-5">
+            <p>Hi there!</p>
+            <p>To continue to view or edit recipes, sign up for an account or log in with 
+                an existing account.
+            </p>
+            <p>
+            <small class="text-muted">*Disclaimer: this is a project done for learning purposes.</small>
+            </p>
+        </div>
         <h2 class="text-center">
             {{ isLoginMode ? 'Welcome Back!' : 'Join Us Today' }}</h2>
         <hr>

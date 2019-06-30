@@ -31,4 +31,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
     this.slService.startedEditing.next(index);
   }
 
+  onDownload() {
+    this.slService.downloadIngredients();
+  }
+
 }

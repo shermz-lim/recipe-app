@@ -1,7 +1,11 @@
 <div class="row mt-5">
   <div class="col-12">
     <div class="mb-5">
-      <h3 class="text-center">Shopping List</h3>
+      <h3 class="text-center">Shopping List 
+        <button 
+        class="btn btn-sm material-light ml-3" [disabled]="ingredients.length === 0"
+        (click)="onDownload()">Download CSV</button>
+      </h3>
       <hr>
     </div>
     <app-shopping-edit></app-shopping-edit>
@@ -13,7 +17,7 @@
       *ngFor="let ingredient of ingredients; let i = index"
       (click)="onClickIngredient(i)"
       >
-        {{ ingredient.name }} ({{ ingredient.amount }})
+        {{ i + 1 }}. <span class="ml-4">{{ ingredient.name }} ({{ ingredient.amount }})</span>
       </a>
     </ul>
   </div>
