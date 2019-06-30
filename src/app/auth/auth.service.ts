@@ -4,6 +4,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { throwError, Subject, BehaviorSubject } from 'rxjs';
 import { User } from './user.model';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 export interface AuthResponseData {
     kind: string;
@@ -18,9 +19,9 @@ export interface AuthResponseData {
 @Injectable({providedIn: 'root'})
 export class AuthService {
     private signUpUrl =
-    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyBH2OsRWNCoxGssP0ihJLqeeKPZQjIJdCQ';
+    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + environment.firebaseAPIKey;
     private loginUrl =
-    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyBH2OsRWNCoxGssP0ihJLqeeKPZQjIJdCQ';
+    'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + environment.firebaseAPIKey;
     private tokenExpirationTimer: any = null;
 
     user = new BehaviorSubject<User>(null);
