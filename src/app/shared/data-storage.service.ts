@@ -6,7 +6,7 @@ import { Recipe } from '../recipes/recipe.model';
 import { map, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class StorageService {
     recipeUrl = 'https://recipe-app-896ab.firebaseio.com/recipes.json';
 
